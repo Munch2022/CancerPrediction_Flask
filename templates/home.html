@@ -1,0 +1,67 @@
+<html>
+<head>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+   <body>
+      <title>Cancer Prediction System</title>
+	  <div class="container">
+		<div class="row">
+
+		  <form action="{{ url_for('predict')}}" method="POST">
+		  	<div class="col-sm-9">
+			 <div class="form-group  purple-border">
+				  <label for="comment">Enter the Clump size:</label>
+				  <textarea class="form-control" rows="1" id="query1" name="query1" rows="1" cols="9" autofocus>{{query1}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				  <label for="comment">Enter the Unif size:</label>
+				  <textarea class="form-control" rows="1" id="query2" name="query2" rows="1" cols="9" autofocus>{{query2}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				  <label for="comment">Enter shape of the Unif:</label>
+				  <textarea class="form-control" rows="1" id="query3" name="query3" rows="1" cols="9" autofocus>{{query3}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				  <label for="comment">Enter Margadh:</label>
+				  <textarea class="form-control" rows="1" id="query4" name="query4" rows="1" cols="9" autofocus>{{query4}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				  <label for="comment">Enter Single Epi Size:</label>
+				  <textarea class="form-control" rows="1" id="query5" name="query5" rows="1" cols="9" autofocus>{{query5}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				<label for="comment">Enter the number of Bare Nucleus:</label>
+				<textarea class="form-control" rows="1" id="query6" name="query6" rows="1" cols="9" autofocus>{{query5}}</textarea>
+		  	</div>
+		  	<div class="form-group  purple-border">
+			<label for="comment">Enter number of Bland Chromosomes:</label>
+			<textarea class="form-control" rows="1" id="query7" name="query7" rows="1" cols="9" autofocus>{{query5}}</textarea>
+			  </div>
+	  		<div class="form-group  purple-border">
+			<label for="comment">Enter Normal Nucleus:</label>
+			<textarea class="form-control" rows="1" id="query8" name="query8" rows="1" cols="9" autofocus>{{query5}}</textarea>
+  			</div>
+			<div class="form-group  purple-border">
+				<label for="comment">Enter Mit:</label>
+				<textarea class="form-control" rows="1" id="query9" name="query9" rows="1" cols="9" autofocus>{{query5}}</textarea>
+			</div>
+			</div>
+			<div class="col-sm-3">
+			<button type="submit" class="btn btn-primary" name="submit">SUBMIT</button>
+			</div>
+		  </form>
+		  </div>
+
+		<div class="row"> 
+			<div class="col-sm-9">
+			<textarea class="form-control" rows="1" id="comment" name="query10" rows="1" cols="9" autofocus>{{output1}}</textarea>
+			
+			</div>
+		</div>
+		</div>
+			
+   	</body>
+</html>
